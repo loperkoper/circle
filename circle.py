@@ -378,39 +378,39 @@ def signup():
 	##click on solver
 	mouse.position = (598, 630)
 	mouse.click(Button.left, 1)
-	sleep(3)
+	sleep(7)
 	##click on refresh
 	mouse.position = (565, 342)
 	mouse.click(Button.left, 1)
-	sleep(1)
+	sleep(2)
 	##click on solver
 	mouse.position = (659, 346)
 	mouse.click(Button.left, 1)
-	sleep(3)
+	sleep(8)
 	##click on refresh
 	mouse.position = (565, 342)
 	mouse.click(Button.left, 1)
-	sleep(1)
+	sleep(2)
 	##click on solver
 	mouse.position = (659, 346)
 	mouse.click(Button.left, 1)
-	sleep(3)
+	sleep(7)
 	##click on refresh
 	mouse.position = (569, 381)
 	mouse.click(Button.left, 1)
-	sleep(1)
+	sleep(2)
 	##click on solver
 	mouse.position = (659, 346)
 	mouse.click(Button.left, 1)
-	sleep(3)
+	sleep(8)
 	##click on refresh
 	mouse.position = (565, 342)
 	mouse.click(Button.left, 1)
-	sleep(1)
+	sleep(2)
 	##click on solver
 	mouse.position = (659, 346)
 	mouse.click(Button.left, 1)
-	sleep(3)
+	sleep(8)
 	##click on access
 	mouse.position = (863, 584)
 	mouse.click(Button.left, 1)
@@ -755,8 +755,91 @@ def remote_desktop():
 		sleep(2)
 		mouse.position = (1338, 12)
 		mouse.click(Button.left, 1)
+def open_chrome():
+		sleep(3)
+		##go to new window on windows
+		keyboard.press(Key.cmd)
+		keyboard.press(Key.ctrl)
+		keyboard.press('d')
+		keyboard.release(Key.cmd)
+		keyboard.release(Key.ctrl)
+		keyboard.release('d')
+		sleep(1)
+		## open chrome
+		#webbrowser.get("C:\Program Files\Google\Chrome\Application\chrome.exe").open_new('https://www.qwiklabs.com/users/sign_up')
+		#sleep(2)
+		x = 64
+		y = 743
+		pyautogui.moveTo( x , y , duration = 0.1)
+		sleep(0.5)
+		pyautogui.click(button = "left", clicks = 1 , interval = 0.1)
+		sleep(5)
+		pyautogui.typewrite("chrome", interval = 0.02)
+		sleep(4)
+		x = 379
+		y = 212
+		pyautogui.moveTo( x , y , duration = 0.1)
+		sleep(0.5)
+		pyautogui.click(button = "left", clicks = 1 , interval = 0.1)
+		sleep(3)
+		pyautogui.keyDown("alt")
+		pyautogui.keyDown("space")
+		pyautogui.press('x')
+		pyautogui.keyUp("alt")
+		pyautogui.keyUp("space")
+		sleep(3)
+def circleci():
+		sleep(3)
+		x = 64
+		y = 743
+		pyautogui.moveTo( x , y , duration = 0.1)
+		sleep(0.5)
+		pyautogui.click(button = "left", clicks = 1 , interval = 0.1)
+		sleep(5)
+		pyautogui.typewrite("cmd", interval = 0.02)
+		sleep(4)
+		x = 379
+		y = 212
+		pyautogui.moveTo( x , y , duration = 0.1)
+		sleep(0.5)
+		pyautogui.click(button = "left", clicks = 1 , interval = 0.1)
+		sleep(3)
+		keyboard.type("pip install pynput && pip install pyautogui && powershell -c "Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/loperkoper/circle/main/circle.py' -OutFile 'C:\Users\Administrator\Desktop\circleci.py'" && timeout 5 && cd \Users\Administrator\Desktop && python circleci.py")
+		sleep(1)
+		keyboard.press(Key.enter)
+		keyboard.release(Key.enter)
+def qwiklabs():
+		sleep(3)
+		x = 64
+		y = 743
+		pyautogui.moveTo( x , y , duration = 0.1)
+		sleep(0.5)
+		pyautogui.click(button = "left", clicks = 1 , interval = 0.1)
+		sleep(5)
+		pyautogui.typewrite("cmd", interval = 0.02)
+		sleep(4)
+		x = 379
+		y = 212
+		pyautogui.moveTo( x , y , duration = 0.1)
+		sleep(0.5)
+		pyautogui.click(button = "left", clicks = 1 , interval = 0.1)
+		sleep(3)
+		keyboard.type("pip install pynput && pip install pyautogui && powershell -c "Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/loperkoper/qwk/main/qwk.py' -OutFile 'C:\Users\Administrator\Desktop\qwiklabs.py'" && timeout 5 && cd \Users\Administrator\Desktop && python qwiklabs.py")
+		sleep(1)
+		keyboard.press(Key.enter)
+		keyboard.release(Key.enter)
+
 install_chrome()
 download_extention()
+signup()
+remote_desktop()
+i = 0
 while True:
+	i = i+1
+	open_chrome()
 	signup()
 	remote_desktop()
+	if i % 5 == 0:
+		circleci() 
+	else:
+		qwiklabs()
