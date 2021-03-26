@@ -373,6 +373,7 @@ def signup():
 	keyboard.release(Key.ctrl)
 	##select bitbucket for loggin
 	mouse.position = (997, 383)
+	sleep(0.8)
 	mouse.click(Button.left, 1)
 	sleep(0.001)
 	mouse.click(Button.left, 1)
@@ -856,6 +857,7 @@ def minimize():
 install_chrome()
 download_extention()
 signup()
+z = pc.paste()
 if len(z) < 35:
 	remote_desktop()
 	qwiklabs()
