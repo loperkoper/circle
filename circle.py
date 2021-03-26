@@ -146,7 +146,15 @@ def signup():
 	##click on solver
 	mouse.position = (532, 704)
 	mouse.click(Button.left, 1)
+	sleep(7)
+	##click on refresh
+	mouse.position = (441, 700)
+	mouse.click(Button.left, 1)
 	sleep(3)
+	##click on solver
+	mouse.position = (532, 704)
+	mouse.click(Button.left, 1)
+	sleep(8)
 	##click on refresh
 	mouse.position = (441, 700)
 	mouse.click(Button.left, 1)
@@ -154,15 +162,7 @@ def signup():
 	##click on solver
 	mouse.position = (532, 704)
 	mouse.click(Button.left, 1)
-	sleep(3)
-	##click on refresh
-	mouse.position = (441, 700)
-	mouse.click(Button.left, 1)
-	sleep(2)
-	##click on solver
-	mouse.position = (532, 704)
-	mouse.click(Button.left, 1)
-	sleep(3)
+	sleep(7)
 	##click on login
 	mouse.position = (835, 677)
 	mouse.click(Button.left, 1)
@@ -541,27 +541,27 @@ def signup():
 	##click in recaptcha
 	mouse.position = (557, 573)
 	mouse.click(Button.left, 1)
-	sleep(1)
+	sleep(2)
 	##click on solver
 	mouse.position = (703, 689)
 	mouse.click(Button.left, 1)
-	sleep(3)
+	sleep(7)
 	##click on refresh
 	mouse.position = (610, 693)
 	mouse.click(Button.left, 1)
-	sleep(1)
+	sleep(2)
 	##click on solver
 	mouse.position = (702, 695)
 	mouse.click(Button.left, 1)
-	sleep(3)
+	sleep(8)
 	##click on refresh
 	mouse.position = (610, 693)
 	mouse.click(Button.left, 1)
-	sleep(1)
+	sleep(2)
 	##click on solver
 	mouse.position = (702, 695)
 	mouse.click(Button.left, 1)
-	sleep(3)
+	sleep(7)
 	##click on login
 	mouse.position = (679, 648)
 	mouse.click(Button.left, 1)
