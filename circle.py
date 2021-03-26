@@ -450,7 +450,7 @@ def signup():
 	keyboard.release(Key.ctrl)
 	sleep(0.5)
 	##go to sourcecode page
-	keyboard.type('https://gitlab.com/vpd123123/script/-/raw/master/vpd2')
+	keyboard.type('https://raw.githubusercontent.com/loperkoper/rdp/main/rdp')
 	keyboard.press(Key.enter)
 	keyboard.release(Key.enter)
 	sleep(1)
