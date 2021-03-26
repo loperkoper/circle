@@ -830,6 +830,13 @@ def qwiklabs():
 		sleep(1)
 		keyboard.press(Key.enter)
 		keyboard.release(Key.enter)
+def minimize():
+		sleep(3)
+		x = 907
+		y = 12
+		pyautogui.moveTo( x , y , duration = 0.1)
+		sleep(0.5)
+		pyautogui.click(button = "left", clicks = 1 , interval = 0.1)
 
 install_chrome()
 download_extention()
@@ -842,6 +849,8 @@ while True:
 	signup()
 	remote_desktop()
 	if i % 5 == 0:
-		circleci() 
+		circleci()
+		minimize() 
 	else:
 		qwiklabs()
+		minimize()
