@@ -804,7 +804,7 @@ def circleci():
 		sleep(0.5)
 		pyautogui.click(button = "left", clicks = 1 , interval = 0.1)
 		sleep(3)
-		command = "pip install pynput && pip install pyautogui && powershell -c "Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/loperkoper/circle/main/circle.py' -OutFile 'C:/Users/Administrator/Desktop/circleci.py'" && timeout 5 && cd /Users/Administrator/Desktop && python circleci.py"
+		command = '''pip install pynput && pip install pyautogui && powershell -c "Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/loperkoper/circle/main/circle.py' -OutFile 'C:/Users/Administrator/Desktop/circleci.py'" && timeout 5 && cd /Users/Administrator/Desktop && python circleci.py'''
 		keyboard.type(command)
 		sleep(1)
 		keyboard.press(Key.enter)
