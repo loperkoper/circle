@@ -1,3 +1,8 @@
+#import os
+#os.system('cmd /c "cd Desktop && cd chrome signup && qwiklabs.com - Chrome.lnk"')
+import pyautogui
+from time import sleep
+import webbrowser
 from pynput.mouse import Button, Controller
 mouse = Controller()
 from pynput.keyboard import Key, Controller
@@ -29,9 +34,21 @@ def install_chrome():
 	keyboard.press(Key.enter)
 	keyboard.release(Key.enter)
 	sleep(4)
+	##naximize
+	pyautogui.keyDown("alt")
+	pyautogui.keyDown("space")
+	pyautogui.press('x')
+	pyautogui.keyUp("alt")
+	pyautogui.keyUp("space")
+	sleep(2)
 	##run installer
-	mouse.position = (722, 273)
+	mouse.position = (960, 705)
 	mouse.click(Button.left, 1)
+	sleep(1)
+	##close eadge
+	mouse.position = (1347, 7)
+	mouse.click(Button.left, 1)
+	##sleep 
 	sleep(25)
 	##maximize
 	pyautogui.keyDown("alt")
@@ -52,7 +69,7 @@ def download_extention():
 	keyboard.type('https://chrome.google.com/webstore/detail/buster-captcha-solver-for/mpbjkejclgfgadiemmefgebjfooflfhl?hl=en')
 	keyboard.press(Key.enter)
 	keyboard.release(Key.enter)
-	sleep(2)
+	sleep(7)
 	##add to chrome
 	mouse.position = (1085, 242)
 	mouse.click(Button.left, 1)
