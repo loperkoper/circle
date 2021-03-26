@@ -855,18 +855,24 @@ def minimize():
 install_chrome()
 download_extention()
 signup()
-remote_desktop()
-qwiklabs()
-minimize()
+if len(z) < 35:
+	remote_desktop()
+	qwiklabs()
+	minimize()
 i = 1
 while True:
 	open_chrome()
 	signup()
-	remote_desktop()
-	if i % 5 == 0:
-		circleci()
-		minimize() 
+	z = pc.paste()
+	if len(z) < 35:
+		if 
+		remote_desktop()
+		if i % 5 == 0:
+			circleci()
+			minimize() 
+		else:
+			qwiklabs()
+			minimize()
+		i = i+1
 	else:
-		qwiklabs()
-		minimize()
-	i = i+1
+		i = i
