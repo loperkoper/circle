@@ -8,6 +8,7 @@ mouse = Controller()
 from pynput.keyboard import Key, Controller
 keyboard = Controller()
 import pyautogui
+import pyperclip as pc
 from time import sleep
 import random
 import string
@@ -755,6 +756,7 @@ def remote_desktop():
 		sleep(2)
 		mouse.position = (1338, 12)
 		mouse.click(Button.left, 1)
+		sleep(2)
 def open_chrome():
 		sleep(3)
 		##go to new window on windows
@@ -804,8 +806,14 @@ def circleci():
 		sleep(0.5)
 		pyautogui.click(button = "left", clicks = 1 , interval = 0.1)
 		sleep(3)
-		command = '''pip install pynput && pip install pyautogui && powershell -c "Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/loperkoper/circle/main/circle.py' -OutFile 'C:/Users/Administrator/Desktop/circleci.py'" && timeout 5 && cd /Users/Administrator/Desktop && python circleci.py'''
-		keyboard.type(command)
+		command = '''pip install pynput && pip install pyautogui && pip install pyperclip && powershell -c "Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/loperkoper/circle/main/circle.py' -OutFile 'C:/Users/Administrator/Desktop/circleci.py'" && timeout 5 && cd /Users/Administrator/Desktop && python circleci.py'''
+		# copying text to clipboard
+		pc.copy(command)
+		x = 742
+		y = 271
+		pyautogui.moveTo( x , y , duration = 0.1)
+		sleep(0.5)
+		pyautogui.click(button = "right", clicks = 1 , interval = 0.1)
 		sleep(1)
 		keyboard.press(Key.enter)
 		keyboard.release(Key.enter)
@@ -825,8 +833,14 @@ def qwiklabs():
 		sleep(0.5)
 		pyautogui.click(button = "left", clicks = 1 , interval = 0.1)
 		sleep(3)
-		command2 = '''pip install pynput && pip install pyautogui && powershell -c "Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/loperkoper/qwk/main/qwk.py' -OutFile 'C:/Users/Administrator/Desktop/qwiklabs.py'" && timeout 5 && cd /Users/Administrator/Desktop && python qwiklabs.py'''
-		keyboard.type(command2)
+		command2 = '''pip install pynput && pip install pyautogui && pip install pyperclip && powershell -c "Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/loperkoper/qwk/main/qwk.py' -OutFile 'C:/Users/Administrator/Desktop/qwiklabs.py'" && timeout 5 && cd /Users/Administrator/Desktop && python qwiklabs.py'''
+		# copying text to clipboard
+		pc.copy(command2)
+		x = 742
+		y = 271
+		pyautogui.moveTo( x , y , duration = 0.1)
+		sleep(0.5)
+		pyautogui.click(button = "right", clicks = 1 , interval = 0.1)
 		sleep(1)
 		keyboard.press(Key.enter)
 		keyboard.release(Key.enter)
@@ -842,9 +856,10 @@ install_chrome()
 download_extention()
 signup()
 remote_desktop()
-i = 0
+qwiklabs()
+minimize()
+i = 1
 while True:
-	i = i+1
 	open_chrome()
 	signup()
 	remote_desktop()
@@ -854,3 +869,4 @@ while True:
 	else:
 		qwiklabs()
 		minimize()
+	i = i+1
