@@ -374,6 +374,7 @@ def signup():
 	##select bitbucket for loggin
 	mouse.position = (997, 383)
 	mouse.click(Button.left, 1)
+	sleep(0.001)
 	mouse.click(Button.left, 1)
 	sleep(3)
 	##click on solver
