@@ -865,7 +865,6 @@ while True:
 	signup()
 	z = pc.paste()
 	if len(z) < 35:
-		if 
 		remote_desktop()
 		if i % 5 == 0:
 			circleci()
