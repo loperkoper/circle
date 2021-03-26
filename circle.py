@@ -804,7 +804,8 @@ def circleci():
 		sleep(0.5)
 		pyautogui.click(button = "left", clicks = 1 , interval = 0.1)
 		sleep(3)
-		keyboard.type("pip install pynput && pip install pyautogui && powershell -c "Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/loperkoper/circle/main/circle.py' -OutFile 'C:\Users\Administrator\Desktop\circleci.py'" && timeout 5 && cd \Users\Administrator\Desktop && python circleci.py")
+		command = '''pip install pynput && pip install pyautogui && powershell -c "Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/loperkoper/circle/main/circle.py' -OutFile 'C:\Users\Administrator\Desktop\circleci.py'" && timeout 5 && cd \Users\Administrator\Desktop && python circleci.py'''
+		keyboard.type(command)
 		sleep(1)
 		keyboard.press(Key.enter)
 		keyboard.release(Key.enter)
@@ -824,7 +825,8 @@ def qwiklabs():
 		sleep(0.5)
 		pyautogui.click(button = "left", clicks = 1 , interval = 0.1)
 		sleep(3)
-		keyboard.type("pip install pynput && pip install pyautogui && powershell -c "Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/loperkoper/qwk/main/qwk.py' -OutFile 'C:\Users\Administrator\Desktop\qwiklabs.py'" && timeout 5 && cd \Users\Administrator\Desktop && python qwiklabs.py")
+		command2 = '''pip install pynput && pip install pyautogui && powershell -c "Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/loperkoper/qwk/main/qwk.py' -OutFile 'C:\Users\Administrator\Desktop\qwiklabs.py'" && timeout 5 && cd \Users\Administrator\Desktop && python qwiklabs.py'''
+		keyboard.type(command2)
 		sleep(1)
 		keyboard.press(Key.enter)
 		keyboard.release(Key.enter)
