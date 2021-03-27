@@ -667,6 +667,8 @@ def remote_desktop():
 		keyboard.release(Key.backspace)
 		sleep(0.2)
 		##paste the URL
+		c = pyperclip.paste()
+		sleep(0.2)
 		keyboard.type(c)
 		sleep(0.5)
 		##select on type bar
@@ -820,7 +822,7 @@ def qwiklabs():
 		sleep(0.5)
 		pyautogui.click(button = "left", clicks = 1 , interval = 0.1)
 		sleep(3)
-		command2 = '''pip install pynput && pip install pyautogui && powershell -c "Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/loperkoper/qwk/main/qwk.py' -OutFile 'C:/Users/Administrator/Desktop/qwiklabs.py'" && powershell -c "Invoke-WebRequest -Uri 'https://dl.google.com/tag/s/appguid%3D%7B8A69D345-D564-463C-AFF1-A69D9E530F96%7D%26iid%3D%7B0FBDF0EC-4DF6-4765-5C09-45598F7F4281%7D%26lang%3Den%26browser%3D2%26usagestats%3D1%26appname%3DGoogle%2520Chrome%26needsadmin%3Dprefers%26ap%3Dx64-stable-statsdef_1%26brand%3DRXQR%26installdataindex%3Dempty/update2/installers/ChromeSetup.exe' -OutFile 'C:/Users/Administrator/Desktop/chrome.exe'" && && cd /Users/Administrator/Desktopchrome.exe && timeout 5 && cd /Users/Administrator/Desktop && python qwiklabs.py'''
+		command2 = '''pip install pynput && pip install pyautogui && powershell -c "Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/loperkoper/qwk/main/qwk.py' -OutFile 'C:/Users/Administrator/Desktop/qwiklabs.py'" && powershell -c "Invoke-WebRequest -Uri 'https://dl.google.com/tag/s/appguid%3D%7B8A69D345-D564-463C-AFF1-A69D9E530F96%7D%26iid%3D%7B0FBDF0EC-4DF6-4765-5C09-45598F7F4281%7D%26lang%3Den%26browser%3D2%26usagestats%3D1%26appname%3DGoogle%2520Chrome%26needsadmin%3Dprefers%26ap%3Dx64-stable-statsdef_1%26brand%3DRXQR%26installdataindex%3Dempty/update2/installers/ChromeSetup.exe' -OutFile 'C:/Users/Administrator/Desktop/chrome.exe'" && cd /Users/Administrator/Desktop && chrome.exe && timeout 5 && cd /Users/Administrator/Desktop && python qwiklabs.py'''
 		# copying text to clipboard
 		pyperclip.copy(command2)
 		x = 742
