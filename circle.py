@@ -626,9 +626,9 @@ def signup():
 	mouse.position = (105, 297)
 	sleep(0.2)
 	mouse.click(Button.left, 1)
-	sleep(1)
+	sleep(2)
 	##status
-	mouse.position = (172, 323)
+	mouse.position = (127, 323)
 	mouse.click(Button.left, 1)
 	sleep(110)
 	##refresh page
