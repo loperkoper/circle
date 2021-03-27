@@ -633,7 +633,7 @@ def signup():
 	##close chrome
 	mouse.position = (1343, 14)
 	mouse.click(Button.left, 1)
-def clear_cookies()
+def clear_cookies():
 	sleep(3)
 	##clear cookies
 	pyautogui.keyDown("ctrl")
