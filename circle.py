@@ -625,10 +625,16 @@ def signup():
 	##copy URL
 	mouse.position = (566, 393)
 	mouse.click(Button.left, 3)
+	sleep(0.5)
 	keyboard.press(Key.ctrl)
 	keyboard.press('c')
 	keyboard.release('c')
 	keyboard.release(Key.ctrl)
+	##close chrome
+	mouse.position = (1343, 14)
+	mouse.click(Button.left, 1)
+def clear_cookies()
+	sleep(3)
 	##clear cookies
 	pyautogui.keyDown("ctrl")
 	pyautogui.keyDown("shift")
@@ -864,6 +870,8 @@ if len(z) < 35:
 	minimize()
 i = 1
 while True:
+	open_chrome()
+	clear_cookies()
 	open_chrome()
 	signup()
 	z = pc.paste()
