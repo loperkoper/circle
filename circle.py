@@ -144,6 +144,7 @@ def signup():
 	keyboard.press('c')
 	keyboard.release('c')
 	keyboard.release(Key.ctrl)
+	sleep(0.2)
 	c = pyperclip.paste()
 	##back to bitbucket
 	keyboard.press(Key.ctrl)
@@ -153,6 +154,7 @@ def signup():
 	sleep(0.5)
 	##paste email
 	mouse.position = (629, 288)
+	sleep(0.5)
 	mouse.click(Button.left, 1)
 	keyboard.type(c)
 	##write full name
@@ -433,8 +435,8 @@ def signup():
 	keyboard.press('c')
 	keyboard.release('c')
 	keyboard.release(Key.ctrl)
+	sleep(0.2)
 	c = pyperclip.paste()
-	sleep(0.5)
 	##back to circle ci
 	keyboard.press(Key.ctrl)
 	keyboard.press('1')
@@ -463,7 +465,10 @@ def signup():
 	keyboard.release(Key.backspace)
 	sleep(0.2)
 	##paste
-	keyboard.type(c)
+	keyboard.press(Key.ctrl)
+	keyboard.press('v')
+	keyboard.release('v')
+	keyboard.release(Key.ctrl)
 	sleep(0.5)
 	##New page
 	keyboard.press(Key.ctrl)
@@ -545,6 +550,7 @@ def signup():
 	keyboard.press('c')
 	keyboard.release('c')
 	keyboard.release(Key.ctrl)
+	sleep(0.2)
 	c = pyperclip.paste()
 	##back to circle ci
 	keyboard.press(Key.ctrl)
@@ -589,6 +595,7 @@ def signup():
 	keyboard.press('c')
 	keyboard.release('c')
 	keyboard.release(Key.ctrl)
+	sleep(0.2)
 	c = pyperclip.paste()
 	##close chrome
 	mouse.position = (1343, 14)
@@ -834,6 +841,7 @@ def minimize():
 install_chrome()
 download_extention()
 signup()
+sleep(0.2)
 z = pyperclip.paste()
 if len(z) < 35:
 	remote_desktop()
@@ -844,6 +852,7 @@ while True:
 	open_chrome()
 	clear_cookies()
 	signup()
+	sleep(0.2)
 	z = pyperclip.paste()
 	if len(z) < 35:
 		remote_desktop()
