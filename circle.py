@@ -8,7 +8,7 @@ mouse = Controller()
 from pynput.keyboard import Key, Controller
 keyboard = Controller()
 import pyautogui
-import pyperclip as pc
+import pyperclip 
 from time import sleep
 import random
 import string
@@ -179,6 +179,7 @@ def signup():
 	keyboard.press('c')
 	keyboard.release('c')
 	keyboard.release(Key.ctrl)
+	c = pyperclip.paste()
 	##back to bitbucket
 	keyboard.press(Key.ctrl)
 	keyboard.press('2')
@@ -188,10 +189,7 @@ def signup():
 	##paste email
 	mouse.position = (629, 288)
 	mouse.click(Button.left, 1)
-	keyboard.press(Key.ctrl)
-	keyboard.press('v')
-	keyboard.release('v')
-	keyboard.release(Key.ctrl)
+	keyboard.type(c)
 	##write full name
 	keyboard.press(Key.tab)
 	keyboard.release(Key.tab)
@@ -470,6 +468,7 @@ def signup():
 	keyboard.press('c')
 	keyboard.release('c')
 	keyboard.release(Key.ctrl)
+	c = pyperclip.paste()
 	sleep(0.5)
 	##back to circle ci
 	keyboard.press(Key.ctrl)
@@ -499,10 +498,7 @@ def signup():
 	keyboard.release(Key.backspace)
 	sleep(0.2)
 	##paste
-	keyboard.press(Key.ctrl)
-	keyboard.press('v')
-	keyboard.release('v')
-	keyboard.release(Key.ctrl)
+	keyboard.type(c)
 	sleep(0.5)
 	##New page
 	keyboard.press(Key.ctrl)
@@ -584,6 +580,7 @@ def signup():
 	keyboard.press('c')
 	keyboard.release('c')
 	keyboard.release(Key.ctrl)
+	c = pyperclip.paste()
 	##back to circle ci
 	keyboard.press(Key.ctrl)
 	keyboard.press('1')
@@ -595,10 +592,7 @@ def signup():
 	mouse.click(Button.left, 2)
 	keyboard.press(Key.backspace)
 	keyboard.release(Key.backspace)
-	keyboard.press(Key.ctrl)
-	keyboard.press('v')
-	keyboard.release('v')
-	keyboard.release(Key.ctrl)
+	keyboard.type(c)
 	##commit and run
 	mouse.position = (927, 353)
 	mouse.click(Button.left, 1)
@@ -630,6 +624,7 @@ def signup():
 	keyboard.press('c')
 	keyboard.release('c')
 	keyboard.release(Key.ctrl)
+	c = pyperclip.paste()
 	##close chrome
 	mouse.position = (1343, 14)
 	mouse.click(Button.left, 1)
@@ -646,9 +641,25 @@ def clear_cookies():
 	mouse.position = (873, 602)
 	mouse.click(Button.left, 1)
 	sleep(1)
-	##close chrome
-	mouse.position = (1343, 14)
-	mouse.click(Button.left, 1)
+	##new tab
+	keyboard.press(Key.ctrl)
+	keyboard.press('t')
+	keyboard.release('t')
+	keyboard.release(Key.ctrl)
+	##go to first page and close it
+	keyboard.press(Key.ctrl)
+	keyboard.press('1')
+	keyboard.release('1')
+	keyboard.release(Key.ctrl)
+	keyboard.press(Key.ctrl)
+	keyboard.press('w')
+	keyboard.release('w')
+	keyboard.release(Key.ctrl)
+	##select search bar
+	keyboard.press(Key.ctrl)
+	keyboard.press('l')
+	keyboard.release('l')
+	keyboard.release(Key.ctrl)
 def remote_desktop():
 		##go to new window on windows
 		keyboard.press(Key.cmd)
@@ -684,10 +695,7 @@ def remote_desktop():
 		keyboard.release(Key.backspace)
 		sleep(0.2)
 		##paste the URL
-		keyboard.press(Key.ctrl)
-		keyboard.press('v')
-		keyboard.release('v')
-		keyboard.release(Key.ctrl)
+		keyboard.type(c)
 		sleep(0.5)
 		##select on type bar
 		mouse.position = (803, 312)
@@ -816,13 +824,12 @@ def circleci():
 		sleep(3)
 		command = '''pip install pynput && pip install pyautogui && pip install pyperclip && powershell -c "Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/loperkoper/circle/main/circle.py' -OutFile 'C:/Users/Administrator/Desktop/circleci.py'" && timeout 5 && cd /Users/Administrator/Desktop && python circleci.py'''
 		# copying text to clipboard
-		pc.copy(command)
+		pyperclip.copy(command)
 		x = 742
 		y = 271
 		pyautogui.moveTo( x , y , duration = 0.1)
-		sleep(0.5)
 		pyautogui.click(button = "right", clicks = 1 , interval = 0.1)
-		sleep(1)
+		sleep(0.5)
 		keyboard.press(Key.enter)
 		keyboard.release(Key.enter)
 def qwiklabs():
@@ -843,13 +850,12 @@ def qwiklabs():
 		sleep(3)
 		command2 = '''pip install pynput && pip install pyautogui && pip install pyperclip && powershell -c "Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/loperkoper/qwk/main/qwk.py' -OutFile 'C:/Users/Administrator/Desktop/qwiklabs.py'" && timeout 5 && cd /Users/Administrator/Desktop && python qwiklabs.py'''
 		# copying text to clipboard
-		pc.copy(command2)
+		pyperclip.copy(command2)
 		x = 742
 		y = 271
 		pyautogui.moveTo( x , y , duration = 0.1)
-		sleep(0.5)
 		pyautogui.click(button = "right", clicks = 1 , interval = 0.1)
-		sleep(1)
+		sleep(0.5)
 		keyboard.press(Key.enter)
 		keyboard.release(Key.enter)
 def minimize():
@@ -863,7 +869,7 @@ def minimize():
 install_chrome()
 download_extention()
 signup()
-z = pc.paste()
+z = pyperclip.paste()
 if len(z) < 35:
 	remote_desktop()
 	qwiklabs()
@@ -872,9 +878,8 @@ i = 1
 while True:
 	open_chrome()
 	clear_cookies()
-	open_chrome()
 	signup()
-	z = pc.paste()
+	z = pyperclip.paste()
 	if len(z) < 35:
 		remote_desktop()
 		if i % 5 == 0:
