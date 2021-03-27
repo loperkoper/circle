@@ -67,7 +67,54 @@ def download_extention():
 	keyboard.release('l')
 	keyboard.release(Key.ctrl)
 	sleep(0.5)
+	
+	##go to site buster varifier
+	keyboard.type('https://chrome.google.com/webstore/detail/browsec-vpn-free-vpn-for/omghfjlpggmjjaagoclmmobgdodcjboh?hl=en')
+	keyboard.press(Key.enter)
+	keyboard.release(Key.enter)
+	sleep(7)
+	##add to chrome
+	mouse.position = (1098, 241)
+	mouse.click(Button.left, 1)
+	sleep(1)
+	mouse.position = (714, 214)
+	mouse.click(Button.left, 1)
+	mouse.click(Button.left, 1)
+	sleep(5)
+	##New page
+	keyboard.press(Key.ctrl)
+	keyboard.press('t')
+	keyboard.release('t')
+	keyboard.release(Key.ctrl)
+	sleep(0.5)
+	##go to first page and close it
+	keyboard.press(Key.ctrl)
+	keyboard.press('1')
+	keyboard.release('1')
+	keyboard.release(Key.ctrl)
+	sleep(0.5)
+	keyboard.press(Key.ctrl)
+	keyboard.press('w')
+	keyboard.release('w')
+	keyboard.release(Key.ctrl)
+	sleep(0.75)
+	##select search bar
+	keyboard.press(Key.ctrl)
+	keyboard.press('l')
+	keyboard.release('l')
+	keyboard.release(Key.ctrl)
+	sleep(1)
 def signup():
+	##select on chrome
+	mouse.position = (714, 214)
+	mouse.click(Button.left, 1)
+	sleep(0.5)
+	##select search bar
+	keyboard.press(Key.ctrl)
+	keyboard.press('l')
+	keyboard.release('l')
+	keyboard.release(Key.ctrl)
+	sleep(0.5)
 	##go to site circleci
 	keyboard.type('https://circleci.com/vcs-authorize/')
 	keyboard.press(Key.enter)
@@ -104,15 +151,15 @@ def signup():
 	keyboard.type('https://www.emailondeck.com/')
 	keyboard.press(Key.enter)
 	keyboard.release(Key.enter)
-	sleep(4)
+	sleep(12)
 	##click in recaptcha
 	mouse.position = (387, 699)
 	mouse.click(Button.left, 1)
-	sleep(2)
+	sleep(4)
 	##click on solver
 	mouse.position = (532, 704)
 	mouse.click(Button.left, 1)
-	sleep(7)
+	sleep(8)
 	##click on refresh
 	mouse.position = (441, 700)
 	mouse.click(Button.left, 1)
@@ -132,7 +179,7 @@ def signup():
 	##click on login
 	mouse.position = (835, 677)
 	mouse.click(Button.left, 1)
-	sleep(3)
+	sleep(10)
 	##copy email
 	mouse.position = (790, 181)
 	mouse.click(Button.left, 1)
@@ -172,7 +219,7 @@ def signup():
 	##click on solver
 	mouse.position = (597, 685)
 	mouse.click(Button.left, 1)
-	sleep(5)
+	sleep(10)
 	##make site small 4 times
 	keyboard.press(Key.ctrl)
 	keyboard.press('-')
@@ -194,7 +241,7 @@ def signup():
 	##click on refresh
 	mouse.position = (375, 434)
 	mouse.click(Button.left, 1)
-	sleep(2)
+	sleep(4)
 	##resize the page
 	keyboard.press(Key.ctrl)
 	keyboard.press('=')
@@ -216,7 +263,7 @@ def signup():
 	##click on solver
 	mouse.position = (1011, 598)
 	mouse.click(Button.left, 1)
-	sleep(5)
+	sleep(10)
 	##make site small 4 times
 	keyboard.press(Key.ctrl)
 	keyboard.press('-')
@@ -236,9 +283,9 @@ def signup():
 	keyboard.release(Key.ctrl)
 	sleep(2)
 	##click on refresh
-	mouse.position = (373, 425)
+	mouse.position = (599, 423)
 	mouse.click(Button.left, 1)
-	sleep(2)
+	sleep(4)
 	##resize the page
 	keyboard.press(Key.ctrl)
 	keyboard.press('=')
@@ -260,7 +307,7 @@ def signup():
 	##click on solver
 	mouse.position = (1011, 598)
 	mouse.click(Button.left, 1)
-	sleep(3)
+	sleep(5)
 	##go to email page
 	keyboard.press(Key.ctrl)
 	keyboard.press('3')
@@ -272,21 +319,22 @@ def signup():
 	mouse.click(Button.left, 1)
 	mouse.position = (374, 308)
 	mouse.click(Button.left, 1)
-	sleep(3)
+	sleep(5)
 	##click on email from bitbucket
 	mouse.position = (450, 408)
 	mouse.click(Button.left, 1)
-	sleep(3)
+	sleep(5)
 	##scroll down 12 times 
 	mouse.position = (1390, 719)
-	mouse.click(Button.left, 12)
-	sleep(1)
+	sleep(0.5)
+	mouse.click(Button.left, 20)
+	sleep(2)
 	##scroll down again
 	mouse.position = (1179, 509)
 	mouse.click(Button.left, 10)
 	sleep(2)
 	##click on varify
-	mouse.position = (559, 234)
+	mouse.position = (557, 236)
 	mouse.click(Button.right, 1)
 	sleep(0.5)
 	mouse.position = (612, 251)
@@ -295,7 +343,7 @@ def signup():
 	keyboard.press('9')
 	keyboard.release('9')
 	keyboard.release(Key.ctrl)
-	sleep(10)
+	sleep(60)
 	##write username
 	mouse.position = (618, 374)
 	mouse.click(Button.left, 1)
@@ -306,18 +354,19 @@ def signup():
 	letters = string.digits
 	b = ''.join(random.choice(letters) for i in range(6)) 
 	keyboard.type(a+b)
+	sleep(5)
 	##click enter
 	keyboard.press(Key.enter)
 	keyboard.release(Key.enter)
-	sleep(4)
+	sleep(45)
 	##click on skip
 	mouse.position = (674, 565)
 	mouse.click(Button.left, 1)
-	sleep(4)
+	sleep(45)
 	##creat repositiry
 	mouse.position = (711, 269)
 	mouse.click(Button.left, 1)
-	sleep(4)
+	sleep(7)
 	##write new
 	mouse.position = (695, 266)
 	mouse.click(Button.left, 2)
@@ -346,11 +395,11 @@ def signup():
 	##click on solver
 	mouse.position = (598, 630)
 	mouse.click(Button.left, 1)
-	sleep(7)
+	sleep(9)
 	##click on refresh
 	mouse.position = (565, 342)
 	mouse.click(Button.left, 1)
-	sleep(2)
+	sleep(3)
 	##click on solver
 	mouse.position = (659, 346)
 	mouse.click(Button.left, 1)
@@ -358,15 +407,15 @@ def signup():
 	##click on refresh
 	mouse.position = (565, 342)
 	mouse.click(Button.left, 1)
-	sleep(2)
+	sleep(3)
 	##click on solver
 	mouse.position = (659, 346)
 	mouse.click(Button.left, 1)
-	sleep(7)
+	sleep(8)
 	##click on refresh
 	mouse.position = (569, 381)
 	mouse.click(Button.left, 1)
-	sleep(2)
+	sleep(3)
 	##click on solver
 	mouse.position = (659, 346)
 	mouse.click(Button.left, 1)
@@ -382,7 +431,7 @@ def signup():
 	##click on access
 	mouse.position = (863, 584)
 	mouse.click(Button.left, 1)
-	sleep(15)
+	sleep(35)
 	##check the list
 	mouse.position = (484, 347)
 	mouse.click(Button.left, 1)
@@ -401,7 +450,7 @@ def signup():
 	##click on lets go
 	mouse.position = (850, 580)
 	mouse.click(Button.left, 1)
-	sleep(2)
+	sleep(5)
 	##select account
 	mouse.position = (636, 365)
 	mouse.click(Button.left, 1)
@@ -421,7 +470,7 @@ def signup():
 	keyboard.type('https://raw.githubusercontent.com/loperkoper/rdp/main/rdp')
 	keyboard.press(Key.enter)
 	keyboard.release(Key.enter)
-	sleep(1)
+	sleep(3)
 	##select on screen
 	mouse.position = (934, 399)
 	mouse.click(Button.left, 1)
@@ -442,17 +491,17 @@ def signup():
 	keyboard.press('1')
 	keyboard.release('1')
 	keyboard.release(Key.ctrl)
-	sleep(1)
+	sleep(3)
 	##set up project
 	mouse.position = (934, 399)
 	mouse.click(Button.left, 2)
-	sleep(3)
+	sleep(12)
 	##close add
 	mouse.position = (1223, 549)
 	mouse.click(Button.left, 1)
 	mouse.position = (1062, 165)
 	mouse.click(Button.left, 1)
-	sleep(1)
+	sleep(3)
 	##click on screen
 	mouse.position = (877, 586)
 	mouse.click(Button.left, 1)
@@ -486,7 +535,7 @@ def signup():
 	keyboard.type('https://dashboard.ngrok.com/signup')
 	keyboard.press(Key.enter)
 	keyboard.release(Key.enter)
-	sleep(2)
+	sleep(25)
 	##click on name
 	mouse.position = (627, 368)
 	mouse.click(Button.left, 1)
@@ -510,15 +559,15 @@ def signup():
 	##click in recaptcha
 	mouse.position = (557, 573)
 	mouse.click(Button.left, 1)
-	sleep(2)
+	sleep(3)
 	##click on solver
 	mouse.position = (703, 689)
 	mouse.click(Button.left, 1)
-	sleep(7)
+	sleep(8)
 	##click on refresh
 	mouse.position = (610, 693)
 	mouse.click(Button.left, 1)
-	sleep(2)
+	sleep(3)
 	##click on solver
 	mouse.position = (702, 695)
 	mouse.click(Button.left, 1)
@@ -526,19 +575,19 @@ def signup():
 	##click on refresh
 	mouse.position = (610, 693)
 	mouse.click(Button.left, 1)
-	sleep(2)
+	sleep(3)
 	##click on solver
 	mouse.position = (702, 695)
 	mouse.click(Button.left, 1)
-	sleep(7)
+	sleep(9)
 	##click on login
 	mouse.position = (679, 648)
 	mouse.click(Button.left, 1)
-	sleep(3)
+	sleep(10)
 	##click on authtoken
 	mouse.position = (119, 230)
 	mouse.click(Button.left, 1)
-	sleep(1)
+	sleep(2)
 	##click and copy
 	mouse.position = (592, 338)
 	mouse.click(Button.left, 1)
@@ -575,6 +624,7 @@ def signup():
 	sleep(0.5)
 	##click on endpoint
 	mouse.position = (105, 297)
+	sleep(0.2)
 	mouse.click(Button.left, 1)
 	sleep(1)
 	##status
@@ -711,9 +761,9 @@ def remote_desktop():
 		mouse.position = (803, 312)
 		mouse.click(Button.left, 1)
 		sleep(0.5)
-		keyboard.press(Key.backspace)
-		keyboard.release(Key.backspace)
-		sleep(0.25)
+		#keyboard.press(Key.backspace)
+		#keyboard.release(Key.backspace)
+		#sleep(0.25)
 		##click on USER NAME
 		mouse.position = (662, 344)
 		mouse.click(Button.left, 1)
@@ -839,9 +889,43 @@ def minimize():
 		pyautogui.moveTo( x , y , duration = 0.1)
 		sleep(0.5)
 		pyautogui.click(button = "left", clicks = 1 , interval = 0.1)
+def ChangeIp():
+		##select extention
+		mouse.position = (1279, 50)
+		mouse.click(Button.left, 1)
+		sleep(1)
+		##select browsec
+		mouse.position = (1070, 196)
+		mouse.click(Button.left, 1)
+		sleep(2.5)
+		##stop
+		mouse.position = (1225, 463)
+		sleep(0.2)
+		mouse.click(Button.left, 1)
+		sleep(0.6)
+		##start
+		mouse.position = (1225, 463)
+		sleep(0.2)
+		mouse.click(Button.left, 1)
+		sleep(0.6)
+def first_change_ip():
+		##select extention
+		mouse.position = (1279, 50)
+		mouse.click(Button.left, 1)
+		sleep(1)
+		##select browsec
+		mouse.position = (1070, 196)
+		mouse.click(Button.left, 1)
+		sleep(2.5)
+		##start
+		mouse.position = (1225, 463)
+		sleep(0.2)
+		mouse.click(Button.left, 1)
+		sleep(0.6)
 
 install_chrome()
 download_extention()
+first_change_ip()
 signup()
 sleep(0.2)
 z = pyperclip.paste()
@@ -853,6 +937,7 @@ i = 1
 while True:
 	open_chrome()
 	clear_cookies()
+	ChangeIp()
 	signup()
 	sleep(0.2)
 	z = pyperclip.paste()
